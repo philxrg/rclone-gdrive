@@ -1,10 +1,12 @@
 # Overview
 
-Batch script to upload files/folders to Google Drive with logging and filtering enabled (both optional)
+Batch script to upload files/folders to Google Drive with logging and filtering enabled (both optional).
 
 ## Usage
 
-If you want to use the default paths then create a folder called Scripts\Rclone on the OS root drive (C:) and extract the zip folder there (e.g C:\Scripts\Rclone). Otherwise you can extract it anywhere and change the variables inside the ***rclone-gdrive.bat*** file.
+This script assumes you have rclone installed by ***Chocolatey***. Otherwise you'll need to change the ***RCLONE_PATH*** to where your rclone.exe is.
+
+If you want to use the default paths then create a folder called Scripts\Rclone on the OS root drive (C:) and extract the zip folder there (e.g C:\Scripts\Rclone). Otherwise you can extract it anywhere and change the variable ***DEFAULT_PATH*** inside the ***rclone-gdrive.bat*** file.
 
 It's strongly recommended that you use your own client_id and client_secret to avoid potential issues with Google Drive. See the link below to learn more:
 
@@ -16,6 +18,6 @@ Logging is enabled by default and everytime the script is run it'll create a .lo
 
 ## Filtering
 
-By default rclone will copy everything on the [source] folder, even hidden files. You can use filters to include (+) or exclude (-) files/folders, this is done on the filters.txt file. If you want to learn more about filtering and how to use then with advanced use cases, see the link below:
+By default rclone will copy everything on the [source] folder, even hidden files. You can use filters to include (+) or exclude (-) files/folders, this is done on the ***filters.txt*** file. If you want to learn more about filtering with advanced use cases, see the link below:
 
 [Rclone filtering](https://rclone.org/filtering/)
